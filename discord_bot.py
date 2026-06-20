@@ -2,8 +2,12 @@ import discord
 from discord import app_commands
 import mysql.connector
 import json
+import os
+from dotenv import load_dotenv
 
-DISCORD_TOKEN = "MTUxNzg4MzkzOTEyODIxMzUyNA.GYNMPq.ct5rJ6t_ejqALLWLpMLBLJUuu90jfTofRhsfTc"
+load_dotenv()
+
+DISCORD_TOKEN = os.getenv("API_KEY")
 GUILD_ID      = 1517883988037992588   # your server ID — get by right-clicking server icon with dev mode on
 
 DB_CONFIG = {
